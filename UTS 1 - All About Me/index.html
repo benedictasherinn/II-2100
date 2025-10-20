@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UTS - All About Me | Benedicta Sherin</title>
+  <style>
+    :root{
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #3b82f6;
+      --radius: 12px;
+      --maxw: 900px;
+      font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 50%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 16px;
+      color:#111827;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow: 0 6px 30px rgba(14, 22, 47, 0.08);
+      overflow:hidden;
+    }
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      padding:28px;
+      border-bottom:1px solid #eef2ff;
+      background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
+    }
+    .avatar{
+      width:120px;
+      height:120px;
+      border-radius:16px;
+      background:#e6eefc;
+      flex:0 0 120px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .header-info h1{margin:0;font-size:20px}
+    .header-info p{margin:6px 0 0;color:var(--muted)}
+    main{padding:28px; line-height:1.6}
+    h2{margin-top:8px}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:8px}
+    .card{background:#fbfdff;border-radius:10px;padding:18px;margin:12px 0;border:1px solid #f1f5f9}
+    ul{margin:8px 0 8px 20px}
+    .topeng-list{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px,1fr));gap:12px;margin-top:14px}
+    .topeng{padding:12px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid #eef2ff}
+    footer{padding:20px 28px;border-top:1px dashed #eef2ff;color:var(--muted);font-size:13px}
+    @media (max-width:520px){
+      .header-info h1{font-size:18px}
+      .avatar{width:88px;height:88px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="document">
+    <header>
+      <div class="avatar" aria-hidden="false">
+        <img src="foto-sherin.jpg" alt="Foto Profil Benedicta Sherin Chyntia Putri" />
+      </div>
+      <div class="header-info">
+        <h1>Benedicta Sherin Chyntia Putri — "Sherin"</h1>
+        <p>Sistem dan Teknologi Informasi, Institut Teknologi Bandung — Semester 3</p>
+        <div class="meta">
+          <span>📍 Lahir: Jember, 2005</span>
+          <span>🚶‍♀️ Merantau sejak SMA (jarak 873 km)</span>
+          <span>💬 Bahasa: Indonesia (aktif)</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tentang Aku</h2>
+        <div class="card">
+          <p>Halo! Perkenalkan namaku <strong>Benedicta Sherin Chyntia Putri</strong>. Orang-orang biasanya memanggilku <strong>Sherin</strong>.
+          Aku saat ini sedang menempuh pendidikan semester 3 dengan jurusan Sistem dan Teknologi Informasi di Institut Teknologi Bandung.
+          Lahir di Jember pada tahun 2005 dan kini sedang hidup merantau <strong>873 km</strong> jauhnya dari rumah.</p>
+
+          <p><em>Fun fact:</em> aku sudah merantau sejak SMA, sudah terbiasa hidup jauh dari keluarga. Menjadi seorang perantau di usia yang sangat muda menjadi perjalanan yang penuh warna bagiku.
+          Dari perantauan, aku belajar tentang arti kedewasaan yang sebenarnya — mengatur waktu, mengambil keputusan, menata emosi, dan beradaptasi dengan berbagai karakter manusia.</p>
+
+          <p>Pelajaran paling berharga tidak hanya datang dari sisi akademik, melainkan dari pertemuan-pertemuan sederhana: obrolan ringan dengan teman sekelas, tawa di tengah malam bersama rekan seperjuangan, atau percakapan jarak jauh dengan keluarga yang selalu menanyakan <q>sudah makan belum?</q>
+          Merantau membuatku memahami bahwa komunikasi bukan hanya tentang berbicara, tetapi tentang menghubungkan hati dan memahami makna di balik setiap kata.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Kisah yang Membentuk Diriku</h2>
+        <p>Setiap orang memiliki kisah yang membentuk siapa dirinya hari ini. Bagiku, kisah itu dimulai dari rasa ingin tahu, kegigihan, dan semangat belajar yang tak pernah padam.
+        Aku percaya bahwa teknologi bukan sekadar alat, melainkan bahasa baru yang membantu manusia memahami dunia lebih baik. Ketertarikan itulah yang membawaku ke dunia Sistem dan Teknologi Informasi.</p>
+
+        <p>Tetapi hidup tidak hanya tentang pencapaian akademik — ada proses jatuh-bangun, momen kelelahan dan keraguan. Dari situ aku belajar arti ketekunan dan makna sejati dari kata <em>berproses</em>.</p>
+      </section>
+
+      <section>
+        <h2>1. Tiga Topeng Kehidupan</h2>
+        <p>Dalam perjalanan hidup, setiap orang memiliki peran berbeda dan bersama peran itu kita mengenakan "topeng" yang menyesuaikan panggung tempat kita berdiri. Bukan untuk berpura-pura, tetapi kadang diperlukan untuk bertahan, diterima, dan dipahami.</p>
+
+        <div class="topeng-list">
+          <article class="topeng">
+            <h3>Topeng Pertama: Versi Dunia</h3>
+            <p>Wajah yang paling sering terlihat — senyum di kampus, kata-kata sopan di ruang rapat, unggahan ceria di media sosial. Topeng ini membantu membangun citra dan menjaga hubungan, namun sering menyembunyikan rasa lelah ataupun takut gagal.</p>
+          </article>
+
+          <article class="topeng">
+            <h3>Topeng Kedua: Versi Diri Sendiri</h3>
+            <p>Ruang pribadi untuk jujur: menatap kelebihan dan kekurangan, mengakui keraguan dan mimpi-mimpi besar. Komunikasi yang jujur dengan diri sendiri adalah dasar komunikasi sehat dengan orang lain.</p>
+          </article>
+
+          <article class="topeng">
+            <h3>Topeng Ketiga: Versi Diri Sejati</h3>
+            <p>Topeng yang dilepas perlahan — mulai tampil otentik, berani menyampaikan pendapat dengan sopan, mengelola konflik dengan empati, dan menjaga hubungan dengan keterbukaan. Diri sejati bukan sempurna, tapi paling jujur.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Komunikasi yang Menumbuhkan</h2>
+        <p>Setiap interaksi adalah kesempatan untuk terus bertumbuh. Pesan yang baik tidak selalu yang paling indah, tapi yang paling tulus dan bermakna.
+        Melalui pengalaman berbicara di kelas, berdiskusi tim, atau berbagi cerita dengan teman, aku berusaha menerapkan prinsip-prinsip komunikasi interpersonal.</p>
+
+        <p>Aku belajar bahwa komunikasi adalah tentang menghubungkan hati dan pikiran — itulah yang membentuk konsep diriku: seseorang yang sedang belajar menikmati proses sambil membangun hubungan yang sehat dengan orang lain.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>Dokumen dibuat: UTS - All About Me • Benedicta Sherin Chyntia Putri</div>
+    </footer>
+  </div>
+</body>
+</html>
