@@ -14,6 +14,7 @@
       --maxw: 900px;
       font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
     }
+
     html,body{height:100%;}
     body{
       margin:0;
@@ -24,14 +25,62 @@
       padding:40px 16px;
       color:#111827;
     }
+
+    /* 🔹 Container besar berisi sidebar + konten utama */
+    .layout {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #f0f4fa;
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      height: fit-content;
+      position: sticky;
+      top: 40px;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .sidebar a:hover {
+      color: var(--accent);
+    }
+
+    /* 🔹 Konten utama */
     .container{
-      width:100%;
-      max-width:var(--maxw);
+      flex: 1;
       background:var(--card);
       border-radius:var(--radius);
       box-shadow: 0 6px 30px rgba(14, 22, 47, 0.08);
       overflow:hidden;
     }
+
     header{
       display:flex;
       gap:20px;
@@ -40,6 +89,7 @@
       border-bottom:1px solid #eef2ff;
       background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
     }
+
     .avatar{
       width:120px;
       height:120px;
@@ -50,6 +100,7 @@
       place-items:center;
       overflow:hidden;
     }
+
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
     .header-info h1{margin:0;font-size:20px}
     .header-info p{margin:6px 0 0;color:var(--muted)}
@@ -61,51 +112,63 @@
     .topeng-list{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px,1fr));gap:12px;margin-top:14px}
     .topeng{padding:12px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid #eef2ff}
     footer{padding:20px 28px;border-top:1px dashed #eef2ff;color:var(--muted);font-size:13px}
-    @media (max-width:520px){
-      .header-info h1{font-size:18px}
-      .avatar{width:88px;height:88px}
+    @media (max-width:768px){
+      .layout{flex-direction:column;}
+      .sidebar{width:100%;position:relative;top:0;}
     }
   </style>
 </head>
 <body>
-  <div class="container" role="document">
-    <header>
-      <div class="avatar" aria-hidden="false">
-        <img src="foto-sherin.jpg" alt="Foto Profil Benedicta Sherin Chyntia Putri" />
-      </div>
-      <div class="header-info">
-        <h1>Benedicta Sherin Chyntia Putri</h1>
-        <h1>Sherin</h1>
-        <p>Sistem dan Teknologi Informasi, Institut Teknologi Bandung (Semester 3)</p>
-        <div class="meta">
-          <span>📍 Asal: Jember</span>
-          <span>Instagram: @benedictasherin</span>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Navigasi</h2>
+      <ul>
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="index.html">UTS 1 - All About Me</a></li>
+        <li><a href="../UTS2-AnotherProject/index.html">UTS 2 - Another Project</a></li>
+        <li><a href="../UTS3-FinalReflection/index.html">UTS 3 - Final Reflection</a></li>
+      </ul>
+    </aside>
+
+    <div class="container" role="document">
+      <header>
+        <div class="avatar" aria-hidden="false">
+          <img src="foto-sherin.jpg" alt="Foto Profil Benedicta Sherin Chyntia Putri" />
         </div>
-      </div>
-    </header>
-
-    <main>
-      <section>
-        <h2>Tentang Aku</h2>
-        <div class="card">
-          <p>Halo! Perkenalkan namaku <strong>Benedicta Sherin Chyntia Putri</strong>. Orang-orang biasanya memanggilku <strong>Sherin</strong>.
-          Aku saat ini sedang menempuh pendidikan semester 3 dengan jurusan Sistem dan Teknologi Informasi di Institut Teknologi Bandung.
-          Lahir di Jember pada tahun 2005 dan kini sedang hidup merantau 873 km jauhnya dari rumah.</p>
-
-          <p><em>Fun fact:</em> aku sudah merantau sejak SMA, sudah terbiasa hidup jauh dari keluarga. Menjadi seorang perantau di usia yang sangat muda menjadi perjalanan yang penuh warna bagiku.
-          Dari perantauan, aku belajar tentang arti kedewasaan yang sebenarnya. Mengatur waktu, mengambil keputusan, menata emosi, dan beradaptasi dengan berbagai karakter manusia. Namun, ada kalanya hal ini menjadi tantangan tersulit yang kulalui terutama saat sakit.
-          Tak ada keluarga yang merawat, tak ada uluran tangan ibu yang menyuapi makanan. Semua harus dihadapi sendiri dengan tubuh yang lemah.</p>
-
-          <p>Merantau demi akademik ternyata banyak memberikan sudut pandang baru bagiku. Aku belajar bahwa dunia tidak sesempit ruang kelas, dan pembelajaran tidak selalu datang dari dosen atau buku. 
-            Setiap orang yang kutemui membawa kisah dan nilai yang berbeda, mulai dari teman seperjuangan yang selalu mendukung, hingga orang asing yang mengajarkan kebaikan tanpa pamrih. 
-            Semua pengalaman itu membentuk caraku memandang hidup hingga saat ini.</p>
+        <div class="header-info">
+          <h1>Benedicta Sherin Chyntia Putri</h1>
+          <h1>Sherin</h1>
+          <p>Sistem dan Teknologi Informasi, Institut Teknologi Bandung (Semester 3)</p>
+          <div class="meta">
+            <span>📍 Asal: Jember</span>
+            <span>Instagram: @benedictasherin</span>
+          </div>
         </div>
-      </section>
-    </main>
+      </header>
 
-    <footer>
-      <div>Dokumen dibuat: UTS - All About Me • Benedicta Sherin Chyntia Putri</div>
-    </footer>
+      <main>
+        <section>
+          <h2>Tentang Aku</h2>
+          <div class="card">
+            <p>Halo! Perkenalkan namaku <strong>Benedicta Sherin Chyntia Putri</strong>. Orang-orang biasanya memanggilku <strong>Sherin</strong>.
+            Aku saat ini sedang menempuh pendidikan semester 3 dengan jurusan Sistem dan Teknologi Informasi di Institut Teknologi Bandung.
+            Lahir di Jember pada tahun 2005 dan kini sedang hidup merantau 873 km jauhnya dari rumah.</p>
+
+            <p><em>Fun fact:</em> aku sudah merantau sejak SMA, sudah terbiasa hidup jauh dari keluarga. Menjadi seorang perantau di usia yang sangat muda menjadi perjalanan yang penuh warna bagiku.
+            Dari perantauan, aku belajar tentang arti kedewasaan yang sebenarnya. Mengatur waktu, mengambil keputusan, menata emosi, dan beradaptasi dengan berbagai karakter manusia. Namun, ada kalanya hal ini menjadi tantangan tersulit yang kulalui terutama saat sakit.
+            Tak ada keluarga yang merawat, tak ada uluran tangan ibu yang menyuapi makanan. Semua harus dihadapi sendiri dengan tubuh yang lemah.</p>
+
+            <p>Merantau demi akademik ternyata banyak memberikan sudut pandang baru bagiku. Aku belajar bahwa dunia tidak sesempit ruang kelas, dan pembelajaran tidak selalu datang dari dosen atau buku. 
+              Setiap orang yang kutemui membawa kisah dan nilai yang berbeda, mulai dari teman seperjuangan yang selalu mendukung, hingga orang asing yang mengajarkan kebaikan tanpa pamrih. 
+              Semua pengalaman itu membentuk caraku memandang hidup hingga saat ini.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>Dokumen dibuat: UTS - All About Me • Benedicta Sherin Chyntia Putri</div>
+      </footer>
+    </div>
   </div>
 </body>
 </html>
