@@ -46,25 +46,25 @@
     main{
       padding:32px;
     }
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:24px;
-    }
-    a{
-      text-decoration:none;
-      background:var(--accent);
-      color:white;
-      padding:10px 20px;
-      border-radius:8px;
-      transition:background 0.2s ease, transform 0.2s ease;
-    }
-    a:hover{
-      background:#4b6ca6;
-      transform:translateY(-2px);
-    }
+    nav {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  background: #f8f8f8;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #e2e8f0;
+}
     footer{
       padding:20px 28px;
       border-top:1px dashed #eef2ff;
@@ -82,7 +82,7 @@
 
     <main>
       <nav>
-        <p><a href="UTS%201%20-%20All%20About%20Me/index.html">UTS 1 - All About Me</a></p>
+        <a href="UTS%201%20-%20All%20About%20Me/index.html">UTS 1 - All About Me</a>
         <a href ="UTS%202%20-%20My%20ASong%20For%20You/index.html"> UTS 2 - My Song For You</a>
       </nav>
     </main>
