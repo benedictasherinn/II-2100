@@ -5,95 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>UTS 2 – My Song For You | Benedicta Sherin</title>
   <style>
-    <style>
     :root{
       --bg: #CBDCEB;
-      --card: #F5EFE6;
-      --muted: #6b7280;
+      --card: #FEFBF6;
       --accent: #6D94C5;
+      --muted: #6b7280;
       --radius: 12px;
       --maxw: 900px;
-      font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      font-family: 'Inter', 'Roboto', system-ui, sans-serif;
     }
-    html,body{height:100%;}
-    body{
-      margin:0;
+    html, body {height: 100%;}
+    body {
+      margin: 0;
       background: var(--bg);
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      padding:40px 16px;
-      color:#111827;
-    }
-
-    .layout {
+      color: #1e1e1e;
       display: flex;
-      gap: 24px;
-      width: 100%;
-      max-width: 1200px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 16px;
     }
     .sidebar {
-      width: 220px;
-      background: #f0f4fa;
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-      height: fit-content;
-      position: sticky;
+      position: fixed;
+      left: 20px;
       top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .sidebar h2 {
-      font-size: 18px;
-      color: var(--accent);
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar li {
-      margin-bottom: 10px;
-    }
-
     .sidebar a {
       text-decoration: none;
       color: #333;
-      font-weight: 500;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #fff3ec;
+      transition: background 0.3s;
     }
-    
-   .sidebar a:hover {
-      color: var(--accent);
+    .sidebar a:hover {
+      background: #f5d6c6;
     }
-
-    .container{
-      flex: 1;
-      background:var(--card);
-      border-radius:var(--radius);
+    .container {
+      width: 100%;
+      max-width: var(--maxw);
+      background: var(--card);
+      border-radius: var(--radius);
       box-shadow: 0 6px 30px rgba(14, 22, 47, 0.08);
-      overflow:hidden;
+      overflow: hidden;
     }
-
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      padding:28px;
-      border-bottom:1px solid #eef2ff;
-      background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
-    }
-    .avatar{
-      width:120px;
-      height:120px;
-      border-radius:16px;
-      background:#e6eefc;
-      flex:0 0 120px;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
+    header {
+      text-align: center;
+      padding: 28px;
+      background: linear-gradient(90deg, rgba(255,205,178,0.2), rgba(255,255,255,0.4));
     }
     header h1 {
       margin: 0;
