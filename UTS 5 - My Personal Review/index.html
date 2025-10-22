@@ -14,15 +14,15 @@
       font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
     }
 
-    html, body {
-      height: 100%;
-      margin: 0;
+    html,body{height:100%;}
+    body{
+      margin:0;
       background: var(--bg);
-      color: #111827;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:40px 16px;
+      color:#111827;
     }
 
     .layout {
@@ -32,7 +32,6 @@
       max-width: 1200px;
     }
 
-    /* Sidebar */
     .sidebar {
       width: 220px;
       background: #f0f4fa;
@@ -65,14 +64,12 @@
       text-decoration: none;
       color: #333;
       font-weight: 500;
-      transition: color 0.2s;
     }
 
     .sidebar a:hover {
       color: var(--accent);
     }
 
-    /* Kontainer utama */
     .container {
       flex: 1;
       background: var(--card);
@@ -81,11 +78,13 @@
       overflow: hidden;
     }
 
-    header {
-      text-align: center;
-      padding: 28px;
-      border-bottom: 1px solid #eef2ff;
-      background: linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      padding:28px;
+      border-bottom:1px solid #eef2ff;
+      background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
     }
 
     header h1 {
@@ -106,6 +105,7 @@
 
     h2 {
       color: #633d2e;
+      text-align: center;
       margin-top: 20px;
     }
 
