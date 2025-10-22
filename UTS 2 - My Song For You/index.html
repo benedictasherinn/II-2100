@@ -7,73 +7,108 @@
   <style>
     :root{
       --bg: #CBDCEB;
-      --card: #FEFBF6;
-      --accent: #6D94C5;
+      --card: #F5EFE6;
       --muted: #6b7280;
+      --accent: #6D94C5;
       --radius: 12px;
       --maxw: 900px;
-      font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+      font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
     }
-    html, body {height: 100%;}
-    body {
-      margin: 0;
+
+    html,body{height:100%;}
+    body{
+      margin:0;
       background: var(--bg);
-      color: #1e1e1e;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:40px 16px;
+      color:#111827;
     }
+
+    .layout {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    /* Sidebar */
     .sidebar {
-      position: fixed;
-      left: 20px;
+      width: 220px;
+      background: #f0f4fa;
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      height: fit-content;
+      position: sticky;
       top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
     }
+
+    .sidebar h2 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
     .sidebar a {
       text-decoration: none;
       color: #333;
-      font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 8px;
-      background: #fff3ec;
-      transition: background 0.3s;
+      font-weight: 500;
     }
+
     .sidebar a:hover {
-      background: #f5d6c6;
+      color: var(--accent);
     }
-    .container {
-      width: 100%;
-      max-width: var(--maxw);
-      background: var(--card);
-      border-radius: var(--radius);
+
+    /* Konten utama */
+    .container{
+      flex: 1;
+      background:var(--card);
+      border-radius:var(--radius);
       box-shadow: 0 6px 30px rgba(14, 22, 47, 0.08);
-      overflow: hidden;
+      overflow:hidden;
     }
+
     header {
       text-align: center;
       padding: 28px;
-      background: linear-gradient(90deg, rgba(255,205,178,0.2), rgba(255,255,255,0.4));
+      border-bottom:1px solid #eef2ff;
+      background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
     }
+
     header h1 {
       margin: 0;
       font-size: 26px;
       color: #3f2c25;
     }
+
     header p {
       color: var(--muted);
       margin-top: 6px;
     }
+
     main {
       padding: 28px;
       line-height: 1.6;
     }
+
     h2 {
       color: #633d2e;
       margin-top: 20px;
     }
+
     .card {
       background: #ffffff;
       border-radius: 10px;
@@ -81,58 +116,69 @@
       margin: 16px 0;
       border: 1px solid #f1f1f1;
     }
+
     iframe {
       width: 100%;
       height: 380px;
       border-radius: 10px;
       border: none;
     }
+
     footer {
       padding: 20px 28px;
-      border-top: 1px dashed #eee;
+      border-top: 1px dashed #eef2ff;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
     }
+
+    @media (max-width:768px){
+      .layout{flex-direction:column;}
+      .sidebar{width:100%;position:relative;top:0;}
+    }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="../index.html">🏠 Home</a>
-    <a href="../UTS%201%20-%20All%20About%20Me/index.html">👩‍💻 UTS 1 - All About Me</a>
-    <a href="./index.html">🎵 UTS 2 - My Song For You</a>
-    <a href="../UTS%203%20-%20My%20Stories%20For%20You/index.html">UTS 3 - My Stories For You</a></li>
-    <a href ="UTS%204%20-%20My%20Shape/index.html"> UTS 4 - My Shape</a></li>
-    <a href ="UTS%205%20-%20My%20Personal%20Review/index.html"> UTS 5 - My Personal Review</a></li>
-  </div>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Navigasi</h2>
+      <ul>
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="../UTS%201%20-%20All%20About%20Me/index.html">👩‍💻 UTS 1 - All About Me</a></li>
+        <li><a href="./index.html">🎵 UTS 2 - My Song For You</a></li>
+        <li><a href="../UTS%203%20-%20My%20Stories%20For%20You/index.html">📖 UTS 3 - My Stories For You</a></li>
+        <li><a href="../UTS%204%20-%20My%20Shape/index.html">🌸 UTS 4 - My Shape</a></li>
+        <li><a href="../UTS%205%20-%20My%20Personal%20Review/index.html">🪞 UTS 5 - My Personal Review</a></li>
+      </ul>
+    </aside>
 
-  <div class="container">
-    <header>
-      <h1>UTS 2 – My Song For You</h1>
-      <p>by Benedicta Sherin Chyntia Putri</p>
-    </header>
+    <div class="container">
+      <header>
+        <h1>UTS 2 – My Song For You</h1>
+        <p>by Benedicta Sherin Chyntia Putri</p>
+      </header>
 
-    <main>
-      <section>
-        <h2>🎬 Music Video</h2>
-        <div class="card">
-          <iframe src="https://www.revid.ai/view/qrkwdJdelaf45bkX98rP" 
-                  title="Home in My Heart - Benedicta Sherin" allowfullscreen></iframe>
-        </div>
-      </section>
+      <main>
+        <section>
+          <h2>🎬 Music Video</h2>
+          <div class="card">
+            <iframe src="https://www.revid.ai/view/qrkwdJdelaf45bkX98rP" 
+                    title="Home in My Heart - Benedicta Sherin" allowfullscreen></iframe>
+          </div>
+        </section>
 
-      <section>
-        <h2>🌤️ About the Song</h2>
-        <div class="card">
-          <p><strong>"Home in My Heart"</strong> is a heartfelt song I wrote for my family back home in Jember.  
-          It captures the quiet ache of distance and the warmth that love carries even across miles.  
-          This piece reminds me that no matter how far I go, their love remains my compass and my comfort.</p>
-        </div>
-      </section>
+        <section>
+          <h2>🌤️ About the Song</h2>
+          <div class="card">
+            <p><strong>"Home in My Heart"</strong> is a heartfelt song I wrote for my family back home in Jember.  
+            It captures the quiet ache of distance and the warmth that love carries even across miles.  
+            This piece reminds me that no matter how far I go, their love remains my compass and my comfort.</p>
+          </div>
+        </section>
 
-      <section>
-        <h2>🎶 Lyrics</h2>
-        <div class="card">
+        <section>
+          <h2>🎶 Lyrics</h2>
+          <div class="card">
 <pre style="white-space: pre-wrap; font-family: inherit; line-height: 1.7;">
 <b>Home in My Heart</b>
 
@@ -166,25 +212,26 @@ Your love still lives inside my heart.
 I may be far, but never gone,
 For home is where my heart belongs.
 </pre>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section>
-        <h2>💌 Meaning Behind the Lyrics</h2>
-        <div class="card">
-          <p>This song speaks about the bittersweet feeling of being far from home,  
-          how distance teaches strength but never replaces warmth.  
-          Each verse mirrors the small moments that connect me to my family: a mother’s voice,  
-          a father’s quiet presence, and the sense that love travels beyond space and time.  
-          It’s a reminder that no matter where life takes me,  
-          <em>home will always live within my heart.</em></p>
-        </div>
-      </section>
-    </main>
+        <section>
+          <h2>💌 Meaning Behind the Lyrics</h2>
+          <div class="card">
+            <p>This song speaks about the bittersweet feeling of being far from home,  
+            how distance teaches strength but never replaces warmth.  
+            Each verse mirrors the small moments that connect me to my family: a mother’s voice,  
+            a father’s quiet presence, and the sense that love travels beyond space and time.  
+            It’s a reminder that no matter where life takes me,  
+            <em>home will always live within my heart.</em></p>
+          </div>
+        </section>
+      </main>
 
-    <footer>
-      <div>UTS 2 – My Song For You • Benedicta Sherin Chyntia Putri</div>
-    </footer>
+      <footer>
+        <div>UTS 2 – My Song For You • Benedicta Sherin Chyntia Putri</div>
+      </footer>
+    </div>
   </div>
 </body>
 </html>
