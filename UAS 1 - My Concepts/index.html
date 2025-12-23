@@ -79,43 +79,64 @@
       overflow:hidden;
     }
 
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      padding:28px;
+    header {
+      text-align: center;
+      padding: 28px;
       border-bottom:1px solid #eef2ff;
       background:linear-gradient(90deg, rgba(59,130,246,0.06), rgba(99,102,241,0.02));
     }
 
-    .avatar{
-      width:120px;
-      height:120px;
-      border-radius:16px;
-      background:#e6eefc;
-      flex:0 0 120px;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #3f2c25;
     }
 
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .header-info h1{margin:0;font-size:20px}
-    .header-info p{margin:6px 0 0;color:var(--muted)}
-    main{padding:28px; line-height:1.6}
-    h2{margin-top:8px}
-    .meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:8px}
-    .card{background:#fbfdff;border-radius:10px;padding:18px;margin:12px 0;border:1px solid #f1f5f9}
-    ul{margin:8px 0 8px 20px}
-    .topeng-list{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px,1fr));gap:12px;margin-top:14px}
-    .topeng{padding:12px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid #eef2ff}
-    footer{padding:20px 28px;border-top:1px dashed #eef2ff;color:var(--muted);font-size:13px}
+    header p {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    main {
+      padding: 28px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #633d2e;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 18px;
+      margin: 16px 0;
+      border: 1px solid #f1f1f1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 380px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    footer {
+      padding: 20px 28px;
+      border-top: 1px dashed #eef2ff;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     @media (max-width:768px){
       .layout{flex-direction:column;}
       .sidebar{width:100%;position:relative;top:0;}
     }
   </style>
 </head>
+
 <body>
   <div class="layout">
     <aside class="sidebar">
@@ -128,8 +149,18 @@
         <li><a href ="../UTS%204%20-%20My%20Shape/index.html">🌸 UTS 4 - My Shape</a></li>
         <li><a href ="../UTS%205%20-%20My%20Personal%20Review/index.html">🪞 UTS 5 - My Personal Review</a></li>
         <li><a href ="index.html">✨️ UAS 1 - My Concepts</a></li>
+        <li><a href ="../UAS%202%20-%20My%20Opinions/index.html"> UAS 2 - My Opinions</a></li>
+        <li><a href ="../UAS%203%20-%20My%20Innovations/index.html"> UAS 3 - My Innovations</a></li>
+        <li><a href ="../UAS%204%20-%20My%20Knowledge/index.html"> UAS 4 - My Knowledge</a></li>
+        <li><a href ="../UAS%205%20-%20My%20Professional%20Review/index.html"> UAS 5 - My Professional Review</a></li>
       </ul>
     </aside>
+
+    <div class="container">
+      <header>
+        <h1>UAS 1 – My Concepts</h1>
+        <p>by Benedicta Sherin Chyntia Putri</p>
+      </header>
 
     <main>
   <section>
@@ -167,3 +198,11 @@
     </div>
   </section>
 </main>
+
+    <footer>
+        <div>Dokumen dibuat: UAS 1 - My Concepts • Benedicta Sherin Chyntia Putri</div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
